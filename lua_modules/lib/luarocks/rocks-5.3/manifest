@@ -1,0 +1,61 @@
+commands = {}
+dependencies = {
+   galconmodslib = {
+      ["0.1-1"] = {}
+   },
+   galcontinbot = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = "~=",
+                  version = {
+                     0, string = "0"
+                  }
+               }
+            },
+            name = "galconmodslib"
+         }
+      }
+   }
+}
+modules = {
+   galconmodslib = {
+      "galconmodslib/0.1-1"
+   },
+   tinbot = {
+      "galcontinbot/0.1-0"
+   },
+   ["tinbot.amodule"] = {
+      "galcontinbot/0.1-0"
+   }
+}
+repository = {
+   galconmodslib = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               galconmodslib = "galconmodslib/init.lua"
+            }
+         }
+      }
+   },
+   galcontinbot = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               galconmodslib = "0.1-1"
+            },
+            modules = {
+               tinbot = "tinbot/init.lua",
+               ["tinbot.amodule"] = "tinbot/amodule.lua"
+            }
+         }
+      }
+   }
+}

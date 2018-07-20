@@ -1,0 +1,12 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "2a043fcd56150fd9b42621fc71cbee02"
+   },
+   ["galcontinbot-0.1-0.rockspec"] = "a959b18ab50e58072fb848fec3bba20b",
+   lua = {
+      tinbot = {
+         ["amodule.lua"] = "cd41cec7ab728e6e1545ce312868ead0",
+         ["init.lua"] = "bc27a3d9626fa151a8e8b398bd2c4d6b"
+      }
+   }
+}
